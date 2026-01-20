@@ -83,7 +83,12 @@ notebooklmURLExport/
 ├── popup.css           # スタイル (サイバーパンク風)
 ├── popup.js            # ポップアップロジック
 ├── console-script.js   # DevToolsコンソール用スクリプト
-└── icons/
+└── darkicons/
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   └── icon128.png
+└── lighticons/
     ├── icon16.png
     ├── icon32.png
     ├── icon48.png
@@ -126,5 +131,6 @@ Issues や Pull Requests は歓迎します！
 <p align="center">
   Made with ❤️ for NotebookLM users
 </p>
+
 
 
