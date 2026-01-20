@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "NotebookLM URL Exporter",
+  "version": "1.0.4",
+  "description": "NotebookLMのデータソースから元URLをエクスポートするChrome拡張機能",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "tabs",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://notebooklm.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "darkicons/icon16.png",
+      "32": "darkicons/icon32.png",
+      "48": "darkicons/icon48.png",
+      "128": "darkicons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "darkicons/icon16.png",
+    "32": "darkicons/icon32.png",
+    "48": "darkicons/icon48.png",
+    "128": "darkicons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://notebooklm.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

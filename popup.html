@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Exporter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-grid"></div>
+      <h1 class="title">
+        <span class="glitch" data-text="URL_EXPORTER">URL_EXPORTER</span>
+      </h1>
+      <p class="subtitle">// NotebookLM.source.extract()</p>
+    </header>
+
+    <!-- オプション -->
+    <div class="options">
+      <label class="checkbox-label">
+        <input type="checkbox" id="autoSave" checked>
+        <span class="checkbox-custom"></span>
+        <span class="checkbox-text">AUTO_SAVE</span>
+      </label>
+    </div>
+
+    <!-- メインボタン -->
+    <button id="exportBtn" class="export-btn">
+      <span class="btn-icon">▶</span>
+      <span class="btn-text">EXECUTE</span>
+    </button>
+
+    <!-- ステータス表示 -->
+    <div id="status" class="status hidden">
+      <div class="status-indicator"></div>
+      <span id="statusText">PROCESSING...</span>
+    </div>
+
+    <!-- プログレスバー -->
+    <div id="progressContainer" class="progress-container hidden">
+      <div class="progress-bar-bg">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <span id="progressText" class="progress-text">0/0</span>
+    </div>
+
+    <!-- 結果表示 -->
+    <div id="results" class="results hidden">
+      <div class="results-header">
+        <span class="results-label">EXTRACTED_URLS:</span>
+        <span id="urlCount" class="url-count">0</span>
+      </div>
+      <ul id="urlList" class="url-list"></ul>
+      <div class="action-buttons">
+        <button id="copyBtn" class="action-btn">
+          <span>⎘</span> COPY
+        </button>
+        <button id="downloadBtn" class="action-btn">
+          <span>↓</span> SAVE
+        </button>
+      </div>
+    </div>
+
+    <!-- エラー表示 -->
+    <div id="error" class="error hidden">
+      <span class="error-icon">⚠</span>
+      <span id="errorText">ERROR</span>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <span class="footer-text">// NotebookLM URL Exporter</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
