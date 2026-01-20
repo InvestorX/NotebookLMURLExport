@@ -1,7 +1,7 @@
 # NotebookLM URL Exporter
 
 <p align="center">
-  <img src="https://github.com/InvestorX/NotebookLMURLExport/blob/main/icon.png" alt="NotebookLM URL Exporter" width="128" height="128">
+  <img src="https://github.com/InvestorX/NotebookLMURLExport/blob/main/icon.png" alt="NotebookLM URL Exporter" width="500" height="500">
 </p>
 
 <p align="center">
@@ -126,4 +126,5 @@ Issues や Pull Requests は歓迎します！
 <p align="center">
   Made with ❤️ for NotebookLM users
 </p>
+
 
